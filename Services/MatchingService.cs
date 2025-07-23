@@ -16,7 +16,7 @@ namespace Animal_Matchmaking.Services
             _logger = logger;
         }
 
-        public bool JoinMatchmaking(Player player, string connectionId)
+        public (bool success, int waitingCount) JoinMatchmaking(Player player, string connectionId)
         {
             try
             {
@@ -24,7 +24,7 @@ namespace Animal_Matchmaking.Services
                 if (_waitingPlayers.ContainsKey(connectionId))
                 {
                     _logger.LogWarning($"플레이어 {player.Nickname}이 이미 대기 중입니다.");
-                    return false;
+                    return (false, _waitingPlayers.Count);
                 }
                 
                 _logger.LogInformation($"플레이어 {player.Nickname}이 매칭에 참가했습니다.");
@@ -32,12 +32,12 @@ namespace Animal_Matchmaking.Services
                 // 대기열에 추가
                 _waitingPlayers.TryAdd(connectionId, player);
                 
-                return true;
+                return (true, _waitingPlayers.Count);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"매칭 참가 실패: {ex.Message}");
-                return false;
+                return (false, _waitingPlayers.Count);
             }
         }
 

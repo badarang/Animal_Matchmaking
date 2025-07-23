@@ -66,14 +66,13 @@ namespace Animal_Matchmaking.Hubs
                     Experience = 0
                 };
 
-                var success = _matchingService.JoinMatchmaking(player, Context.ConnectionId);
+                var (success, waitingCount) = _matchingService.JoinMatchmaking(player, Context.ConnectionId);
                 
                 if (success)
                 {
-                    var waitingCount = _matchingService.GetWaitingCount();
                     var message = waitingCount == 1 ? "매칭에 참가했습니다. 상대방을 기다리는 중..." : "매칭에 참가했습니다.";
                     await Clients.Caller.SendAsync("MatchmakingJoined", message);
-                    _logger.LogInformation($"플레이어 {nickname}이 매칭에 참가했습니다.");
+                    _logger.LogInformation($"플레이어 {nickname}이 매칭에 참가했습니다. (대기 중: {waitingCount}명)");
                     
                     // 매칭 시도
                     var (matched, room, matchedPlayers) = _matchingService.TryMatchPlayers();

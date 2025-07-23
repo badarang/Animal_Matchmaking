@@ -22,3 +22,18 @@
 2025-07-23 23:14:20.521 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_5983:0
 2025-07-23 23:14:20.521 +09:00 [INF] 플레이어 Player_5983이 매칭에 참가했습니다.
 2025-07-23 23:14:20.529 +09:00 [INF] 게임 룸 f0b14523-b8ef-4c2c-849e-89f48a3e12f5가 생성되었습니다. 플레이어: Player_4354, Player_5983
+2025-07-23 23:18:23.699 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-23 23:18:23.700 +09:00 [INF] Executed endpoint '/ws'
+2025-07-23 23:18:23.700 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 254371.3187ms
+2025-07-23 23:18:25.209 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-23 23:18:25.210 +09:00 [INF] Executed endpoint '/ws'
+2025-07-23 23:18:25.210 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 270002.0908ms
+2025-07-23 23:18:38.311 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:18:38.313 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:18:44.980 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:18:44.981 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:18:48.276 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_2092:0
+2025-07-23 23:18:48.276 +09:00 [INF] 플레이어 Player_2092이 매칭에 참가했습니다.
+2025-07-23 23:18:50.704 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_1523:0
+2025-07-23 23:18:50.705 +09:00 [INF] 플레이어 Player_1523이 매칭에 참가했습니다.
+2025-07-23 23:18:50.706 +09:00 [INF] 게임 룸 f8fc8812-834c-46aa-8136-93a3389df710가 생성되었습니다. 플레이어: Player_1523, Player_2092
