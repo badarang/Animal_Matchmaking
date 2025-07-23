@@ -1,0 +1,336 @@
+2025-07-20 00:17:41.575 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 00:17:41.731 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:17:42.866 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:17:42.872 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 1298.7282ms
+2025-07-20 00:20:09.364 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 00:20:09.367 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:20:29.423 +09:00 [INF] Connection id "0HNE6QTJPP2RG", Request id "0HNE6QTJPP2RG:00000001": the application aborted the connection.
+2025-07-20 00:20:29.426 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:20:29.427 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20064.0453ms
+2025-07-20 00:24:08.792 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/ - null null
+2025-07-20 00:24:08.797 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:24:08.815 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:24:08.822 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/ - 400 null text/plain 29.5652ms
+2025-07-20 00:24:10.151 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - null 0
+2025-07-20 00:24:10.155 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - 404 0 null 4.3023ms
+2025-07-20 00:24:10.157 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5216/gamehub/gamehub/negotiate, Response status code: 404
+2025-07-20 00:25:31.352 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/ - null null
+2025-07-20 00:25:31.354 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:25:31.355 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:25:31.357 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/ - 400 null text/plain 5.4214ms
+2025-07-20 00:25:32.507 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - null 0
+2025-07-20 00:25:32.508 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - 404 0 null 0.5805ms
+2025-07-20 00:25:32.508 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5216/gamehub/gamehub/negotiate, Response status code: 404
+2025-07-20 00:29:53.968 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 00:29:54.066 +09:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5216: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-07-20 00:30:54.244 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 00:30:54.338 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 00:30:54.340 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 00:30:54.341 +09:00 [INF] Hosting environment: Development
+2025-07-20 00:30:54.341 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 00:31:17.655 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/ - null null
+2025-07-20 00:31:17.749 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:31:17.781 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:31:17.788 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/ - 400 null text/plain 134.4172ms
+2025-07-20 00:31:19.004 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - null 0
+2025-07-20 00:31:19.009 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - 404 0 null 5.4638ms
+2025-07-20 00:31:19.010 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5216/gamehub/gamehub/negotiate, Response status code: 404
+2025-07-20 00:33:05.168 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/ - null null
+2025-07-20 00:33:05.169 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:33:05.170 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:33:05.170 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/ - 400 null text/plain 2.461ms
+2025-07-20 00:33:06.326 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - null 0
+2025-07-20 00:33:06.327 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/gamehub/negotiate - 404 0 null 1.126ms
+2025-07-20 00:33:06.327 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5216/gamehub/gamehub/negotiate, Response status code: 404
+2025-07-20 00:33:44.245 +09:00 [INF] Application is shutting down...
+2025-07-20 00:33:53.436 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 00:33:53.560 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 00:33:53.562 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 00:33:53.563 +09:00 [INF] Hosting environment: Development
+2025-07-20 00:33:53.563 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 00:34:34.545 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/ - null null
+2025-07-20 00:34:34.685 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 00:34:34.783 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 00:34:34.804 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/ - 400 null text/plain 261.5802ms
+2025-07-20 00:34:35.833 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/test - null null
+2025-07-20 00:34:35.835 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/test - 404 0 null 1.9979ms
+2025-07-20 00:34:35.836 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5216/gamehub/test, Response status code: 404
+2025-07-20 00:34:36.025 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub/status - null null
+2025-07-20 00:34:36.026 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub/status - 404 0 null 0.9907ms
+2025-07-20 00:34:36.026 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5216/gamehub/status, Response status code: 404
+2025-07-20 00:34:36.103 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/echo - text/plain; charset=utf-8 39
+2025-07-20 00:34:36.104 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/echo - 404 0 null 0.607ms
+2025-07-20 00:34:36.104 +09:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5216/gamehub/echo, Response status code: 404
+2025-07-20 00:36:00.519 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 00:36:00.524 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 00:36:00.526 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 00:36:00.526 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 6.9255ms
+2025-07-20 00:36:01.576 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/test - null null
+2025-07-20 00:36:01.576 +09:00 [INF] Executing endpoint 'HTTP: GET /test'
+2025-07-20 00:36:01.577 +09:00 [INF] Executed endpoint 'HTTP: GET /test'
+2025-07-20 00:36:01.577 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/test - 200 null text/plain; charset=utf-8 0.774ms
+2025-07-20 00:36:15.260 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 00:36:15.260 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 00:36:15.348 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 00:36:15.349 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 89.1244ms
+2025-07-20 00:36:15.365 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/echo - text/plain; charset=utf-8 39
+2025-07-20 00:36:15.367 +09:00 [INF] Executing endpoint 'HTTP: POST /echo'
+2025-07-20 00:36:15.414 +09:00 [INF] Executed endpoint 'HTTP: POST /echo'
+2025-07-20 00:36:15.439 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Required parameter "string message" was not provided from query string.
+   at lambda_method23(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass81_0.<Create>b__1(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context, ICorsPolicyProvider corsPolicyProvider)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.<>c__DisplayClass6_0.<CreateMiddleware>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-20 00:36:15.488 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/echo - 400 null text/plain; charset=utf-8 122.732ms
+2025-07-20 00:36:41.196 +09:00 [INF] Application is shutting down...
+2025-07-20 00:36:49.768 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 00:36:49.882 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 00:36:49.884 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 00:36:49.885 +09:00 [INF] Hosting environment: Development
+2025-07-20 00:36:49.885 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 00:37:01.608 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 00:37:01.654 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 00:37:01.676 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 00:37:01.682 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 74.6944ms
+2025-07-20 00:37:02.912 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/test - null null
+2025-07-20 00:37:02.913 +09:00 [INF] Executing endpoint 'HTTP: GET /test'
+2025-07-20 00:37:02.914 +09:00 [INF] Executed endpoint 'HTTP: GET /test'
+2025-07-20 00:37:02.914 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/test - 200 null text/plain; charset=utf-8 2.6059ms
+2025-07-20 00:37:03.041 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 00:37:03.045 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 00:37:03.058 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 00:37:03.058 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 16.8741ms
+2025-07-20 00:37:03.123 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/echo - text/plain; charset=utf-8 39
+2025-07-20 00:37:03.124 +09:00 [INF] Executing endpoint 'HTTP: POST /echo'
+2025-07-20 00:37:03.128 +09:00 [INF] Executed endpoint 'HTTP: POST /echo'
+2025-07-20 00:37:03.128 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/echo - 200 null text/plain; charset=utf-8 4.8629ms
+2025-07-20 01:52:15.637 +09:00 [INF] Application is shutting down...
+2025-07-20 02:10:43.493 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 02:10:43.616 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 02:10:43.618 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 02:10:43.618 +09:00 [INF] Hosting environment: Development
+2025-07-20 02:10:43.618 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 02:10:49.628 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 02:10:49.711 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 02:10:49.737 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 02:10:49.740 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 113.6341ms
+2025-07-20 02:27:15.906 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 02:27:15.917 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 02:27:15.936 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 02:27:15.939 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 34.5735ms
+2025-07-20 02:27:16.016 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 02:27:16.021 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 02:27:16.022 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 02:27:16.026 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 9.5593ms
+2025-07-20 02:27:52.215 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 02:27:52.219 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 02:27:52.219 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 02:27:52.219 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 4.5359ms
+2025-07-20 02:28:23.983 +09:00 [INF] Application is shutting down...
+2025-07-20 02:32:49.924 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 02:32:50.047 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 02:32:50.049 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 02:32:50.049 +09:00 [INF] Hosting environment: Development
+2025-07-20 02:32:50.049 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 02:32:53.434 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 02:32:53.461 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 02:32:53.475 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 02:32:53.477 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 44.1333ms
+2025-07-20 02:38:20.104 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 02:38:20.107 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 02:38:20.110 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 02:38:20.110 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 6.7417ms
+2025-07-20 02:38:20.282 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ - null null
+2025-07-20 02:38:20.283 +09:00 [INF] Executing endpoint 'HTTP: GET /'
+2025-07-20 02:38:20.283 +09:00 [INF] Executed endpoint 'HTTP: GET /'
+2025-07-20 02:38:20.283 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ - 200 null text/plain; charset=utf-8 1.2908ms
+2025-07-20 02:39:49.212 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 02:39:49.222 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 02:39:49.223 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 02:39:49.224 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 13.1749ms
+2025-07-20 02:40:33.092 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:40:33.094 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:40:38.005 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:40:38.007 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:40:53.166 +09:00 [INF] Connection id "0HNE6T95APRCD", Request id "0HNE6T95APRCD:00000001": the application aborted the connection.
+2025-07-20 02:40:53.171 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:40:53.172 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20080.5052ms
+2025-07-20 02:40:58.010 +09:00 [INF] Connection id "0HNE6T95APRCE", Request id "0HNE6T95APRCE:00000001": the application aborted the connection.
+2025-07-20 02:40:58.012 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:40:58.012 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20007.0747ms
+2025-07-20 02:41:27.954 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:41:27.957 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:41:28.307 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:41:28.309 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:41:34.859 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:41:34.859 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 6905.8415ms
+2025-07-20 02:41:35.434 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:41:35.435 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 7127.6356ms
+2025-07-20 02:41:51.173 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:41:51.176 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:41:51.505 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 02:41:51.506 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:42:11.180 +09:00 [INF] Connection id "0HNE6T95APRCH", Request id "0HNE6T95APRCH:00000001": the application aborted the connection.
+2025-07-20 02:42:11.185 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:42:11.186 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20012.5592ms
+2025-07-20 02:42:11.508 +09:00 [INF] Connection id "0HNE6T95APRCI", Request id "0HNE6T95APRCI:00000001": the application aborted the connection.
+2025-07-20 02:42:11.509 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:42:11.509 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20003.807ms
+2025-07-20 02:52:47.782 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/negotiate?negotiateVersion=1 - null 0
+2025-07-20 02:52:47.816 +09:00 [INF] Executing endpoint '/gamehub/negotiate'
+2025-07-20 02:52:47.889 +09:00 [INF] Executed endpoint '/gamehub/negotiate'
+2025-07-20 02:52:47.890 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/negotiate?negotiateVersion=1 - 200 316 application/json 108.3872ms
+2025-07-20 02:52:47.987 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub?id=edzbM_74q9EHOTPnV0n96Q - null null
+2025-07-20 02:52:47.988 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:52:48.261 +09:00 [INF] 플레이어 연결됨: jQ4NWzDbUuJ4NB0xoRLPgw
+2025-07-20 02:52:48.262 +09:00 [INF] 연결 시간: 7/20/2025 2:52:48 AM
+2025-07-20 02:52:48.427 +09:00 [INF] Request starting HTTP/1.1 POST http://localhost:5216/gamehub/negotiate?negotiateVersion=1 - null 0
+2025-07-20 02:52:48.427 +09:00 [INF] Executing endpoint '/gamehub/negotiate'
+2025-07-20 02:52:48.428 +09:00 [INF] Executed endpoint '/gamehub/negotiate'
+2025-07-20 02:52:48.428 +09:00 [INF] Request finished HTTP/1.1 POST http://localhost:5216/gamehub/negotiate?negotiateVersion=1 - 200 316 application/json 0.7207ms
+2025-07-20 02:52:48.470 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub?id=eN0vi3WO8n5dURr6DqK0cA - null null
+2025-07-20 02:52:48.470 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 02:52:48.523 +09:00 [INF] 플레이어 연결됨: uXHvABqcDde9EttbuF0t3w
+2025-07-20 02:52:48.523 +09:00 [INF] 연결 시간: 7/20/2025 2:52:48 AM
+2025-07-20 02:52:54.282 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 02:52:54.284 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 02:52:56.393 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 02:52:56.394 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 02:52:56.402 +09:00 [INF] 게임 룸 db8b591c-3aee-40ba-a4bc-3ad0f9c2535b가 생성되었습니다. 플레이어: Player, Player
+2025-07-20 02:53:29.760 +09:00 [INF] 플레이어 연결 해제: uXHvABqcDde9EttbuF0t3w
+2025-07-20 02:53:29.762 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:53:29.763 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub?id=eN0vi3WO8n5dURr6DqK0cA - 101 null null 41293.6355ms
+2025-07-20 02:53:30.377 +09:00 [INF] 플레이어 연결 해제: jQ4NWzDbUuJ4NB0xoRLPgw
+2025-07-20 02:53:30.387 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 02:53:30.387 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub?id=edzbM_74q9EHOTPnV0n96Q - 101 null null 42400.1975ms
+2025-07-20 02:55:13.637 +09:00 [INF] Application is shutting down...
+2025-07-20 02:55:26.215 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 02:55:26.330 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 02:55:26.333 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 02:55:26.333 +09:00 [INF] Hosting environment: Development
+2025-07-20 02:55:26.333 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 02:57:51.543 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 02:57:51.574 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 02:57:51.589 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 02:57:51.592 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 49.6457ms
+2025-07-20 03:02:15.734 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 03:02:15.745 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 03:02:16.160 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/gamehub - null null
+2025-07-20 03:02:16.176 +09:00 [INF] Executing endpoint '/gamehub'
+2025-07-20 03:02:35.956 +09:00 [INF] Connection id "0HNE6TN3PR77M", Request id "0HNE6TN3PR77M:00000001": the application aborted the connection.
+2025-07-20 03:02:35.962 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 03:02:35.963 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20233.3795ms
+2025-07-20 03:02:36.178 +09:00 [INF] Connection id "0HNE6TN3PR77N", Request id "0HNE6TN3PR77N:00000001": the application aborted the connection.
+2025-07-20 03:02:36.179 +09:00 [INF] Executed endpoint '/gamehub'
+2025-07-20 03:02:36.179 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/gamehub - 101 null null 20019.5398ms
+2025-07-20 03:03:21.370 +09:00 [INF] Application is shutting down...
+2025-07-20 03:04:53.468 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 03:04:53.607 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 03:04:53.610 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 03:04:53.610 +09:00 [INF] Hosting environment: Development
+2025-07-20 03:04:53.610 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 03:04:56.594 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 03:04:56.620 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 03:04:56.635 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 03:04:56.638 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 44.7116ms
+2025-07-20 03:07:05.636 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:07:05.639 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:07:14.338 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 03:07:14.338 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:07:14.339 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 8703.4678ms
+2025-07-20 03:07:27.174 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:07:27.176 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:07:29.897 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player:0
+2025-07-20 03:07:29.900 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 03:07:48.205 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 03:07:48.206 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:07:48.206 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 21031.9997ms
+2025-07-20 03:08:21.145 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:08:21.161 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:08:25.073 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:08:25.077 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:08:28.861 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player:0
+2025-07-20 03:08:28.862 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 03:08:28.874 +09:00 [INF] 게임 룸 51199c33-6672-459e-9d1b-464a84d7feab가 생성되었습니다. 플레이어: Player, Player
+2025-07-20 03:08:33.680 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player:0
+2025-07-20 03:08:33.680 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 03:08:59.136 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 03:08:59.138 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:08:59.138 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 37994.4367ms
+2025-07-20 03:08:59.287 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 03:08:59.288 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:08:59.289 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 34217.7187ms
+2025-07-20 03:09:17.421 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:09:17.422 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:09:22.430 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 03:09:22.434 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 03:09:39.346 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player:0
+2025-07-20 03:09:39.347 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 03:09:39.348 +09:00 [INF] 게임 룸 887c9549-fe15-4565-b9c5-db27a1ea470a가 생성되었습니다. 플레이어: Player, Player
+2025-07-20 03:11:07.800 +09:00 [INF] Application is shutting down...
+2025-07-20 03:11:37.815 +09:00 [ERR] WebSocket 처리 오류: The connection was aborted because the server is shutting down and request processing didn't complete within the time specified by HostOptions.ShutdownTimeout.
+2025-07-20 03:11:37.816 +09:00 [ERR] WebSocket 처리 오류: The connection was aborted because the server is shutting down and request processing didn't complete within the time specified by HostOptions.ShutdownTimeout.
+2025-07-20 03:11:37.816 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:11:37.816 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 03:11:37.816 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 135388.9239ms
+2025-07-20 03:11:37.816 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 140396.7732ms
+2025-07-20 03:12:06.387 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-20 03:12:06.531 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-20 03:12:06.533 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-20 03:12:06.533 +09:00 [INF] Hosting environment: Development
+2025-07-20 03:12:06.533 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-20 03:12:13.145 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/status - null null
+2025-07-20 03:12:13.171 +09:00 [INF] Executing endpoint 'HTTP: GET /status'
+2025-07-20 03:12:13.186 +09:00 [INF] Executed endpoint 'HTTP: GET /status'
+2025-07-20 03:12:13.189 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/status - 200 null application/json; charset=utf-8 45.1804ms
+2025-07-20 11:40:21.406 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 11:40:21.453 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 11:40:27.322 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player:0
+2025-07-20 11:40:27.325 +09:00 [INF] 플레이어 Player이 매칭에 참가했습니다.
+2025-07-20 11:49:18.070 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 11:49:18.073 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 11:49:18.074 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 536497.5315ms
+2025-07-20 11:50:39.239 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 11:50:39.244 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 11:50:42.506 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-20 11:50:42.510 +09:00 [INF] Executing endpoint '/ws'
+2025-07-20 11:51:07.428 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_9765:0
+2025-07-20 11:51:07.430 +09:00 [INF] 플레이어 Player_9765이 매칭에 참가했습니다.
+2025-07-20 11:51:07.460 +09:00 [INF] 게임 룸 f441ceb9-6caa-4046-8d1c-18c55378dfe6가 생성되었습니다. 플레이어: Player_9765, Player
+2025-07-20 11:51:10.677 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_8224:0
+2025-07-20 11:51:10.677 +09:00 [INF] 플레이어 Player_8224이 매칭에 참가했습니다.
+2025-07-20 11:53:17.457 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 11:53:17.459 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 11:53:17.460 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 154960.6368ms
+2025-07-20 11:53:17.577 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-20 11:53:17.578 +09:00 [INF] Executed endpoint '/ws'
+2025-07-20 11:53:17.578 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 158345.5651ms

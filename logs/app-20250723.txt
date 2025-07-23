@@ -1,0 +1,15 @@
+2025-07-23 23:05:15.522 +09:00 [INF] 서버가 시작되었습니다!
+2025-07-23 23:05:15.606 +09:00 [INF] Now listening on: http://localhost:5216
+2025-07-23 23:05:15.608 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-23 23:05:15.608 +09:00 [INF] Hosting environment: Development
+2025-07-23 23:05:15.608 +09:00 [INF] Content root path: /Users/haein/RiderProjects/Animal_Matchmaking
+2025-07-23 23:05:30.439 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:05:30.456 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:05:32.481 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:05:32.488 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:05:49.728 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-23 23:05:49.728 +09:00 [INF] Executed endpoint '/ws'
+2025-07-23 23:05:49.729 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 17248.9555ms
+2025-07-23 23:05:50.081 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
+2025-07-23 23:05:50.082 +09:00 [INF] Executed endpoint '/ws'
+2025-07-23 23:05:50.082 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 19643.875ms
