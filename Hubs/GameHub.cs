@@ -70,7 +70,9 @@ namespace Animal_Matchmaking.Hubs
                 
                 if (success)
                 {
-                    await Clients.Caller.SendAsync("MatchmakingJoined", "매칭에 참가했습니다.");
+                    var waitingCount = _matchingService.GetWaitingCount();
+                    var message = waitingCount == 1 ? "매칭에 참가했습니다. 상대방을 기다리는 중..." : "매칭에 참가했습니다.";
+                    await Clients.Caller.SendAsync("MatchmakingJoined", message);
                     _logger.LogInformation($"플레이어 {nickname}이 매칭에 참가했습니다.");
                     
                     // 매칭 시도

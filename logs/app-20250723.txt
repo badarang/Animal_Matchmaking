@@ -13,3 +13,12 @@
 2025-07-23 23:05:50.081 +09:00 [ERR] WebSocket 처리 오류: The remote party closed the WebSocket connection without completing the close handshake.
 2025-07-23 23:05:50.082 +09:00 [INF] Executed endpoint '/ws'
 2025-07-23 23:05:50.082 +09:00 [INF] Request finished HTTP/1.1 GET http://localhost:5216/ws - 101 null null 19643.875ms
+2025-07-23 23:13:55.208 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:13:55.252 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:14:09.328 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:5216/ws - null null
+2025-07-23 23:14:09.331 +09:00 [INF] Executing endpoint '/ws'
+2025-07-23 23:14:15.957 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_4354:0
+2025-07-23 23:14:15.965 +09:00 [INF] 플레이어 Player_4354이 매칭에 참가했습니다.
+2025-07-23 23:14:20.521 +09:00 [INF] WebSocket 메시지 수신: JOIN:Player_5983:0
+2025-07-23 23:14:20.521 +09:00 [INF] 플레이어 Player_5983이 매칭에 참가했습니다.
+2025-07-23 23:14:20.529 +09:00 [INF] 게임 룸 f0b14523-b8ef-4c2c-849e-89f48a3e12f5가 생성되었습니다. 플레이어: Player_4354, Player_5983
